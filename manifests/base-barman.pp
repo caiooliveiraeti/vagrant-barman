@@ -14,9 +14,6 @@ class { 'postgresql::server':
   ipv4acls => ['host all all 0.0.0.0/0 md5'],
   postgres_password => 'postgres',
 }->
-package { "postgresql-client-9.3": 
-  ensure => "installed" 
-}->
 package { "barman": 
   ensure => "installed" 
 }
