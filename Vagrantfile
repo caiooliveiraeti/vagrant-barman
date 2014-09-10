@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #puppet module install puppetlabs-postgresql --modulepath /vagrant/modules
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32"
+  config.vm.box = "hashicorp/precise32"
 
 config.vm.define "barman" do |barman|
     barman.vm.network :private_network, ip: "192.168.33.12"
