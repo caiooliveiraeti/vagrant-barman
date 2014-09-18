@@ -28,6 +28,7 @@ postgresql::server::pg_hba_rule { 'allow barman network to access database':
 postgresql::server::config_entry {
   'wal_level'       : value => 'hot_standby';
   'archive_mode'    : value => 'on';
+  'archive_timeout'    : value => '10';
   'archive_command' : value => 'rsync -a %p barman@barman:/var/lib/barman/producao/incoming/%f';
 }
 
